@@ -12,10 +12,10 @@ function NewBooks(title, author) {
   this.title = title;
   this.author = author;
 }
-
 const add = container.querySelector('.add'); 
 const title = container.querySelector('.title'); 
 const author = container.querySelector('.author'); 
+
 function addBooks(title, author) { 
   const book = new NewBooks(title, author); 
   books.push(book); 
@@ -25,4 +25,28 @@ function editLocalStorage(index) {
   books = JSON.parse(localStorage.books);
   const data = books.filter((book) => book !== books[index]); 
   localStorage.setItem('books', JSON.stringify(data));
+}
+
+
+function removeBook(index) {
+  books = books.filter((item) => item !== books[index]);
+}
+
+function displayBooks(arr) {
+  bookContainer.innerHTML = '';
+  for (let i = 0; i < arr.length; i += 1) {
+    const x = ` 
+    <p>${arr[i].title}</p>
+    <p>${arr[i].author}</p>
+    <button class="remove">Remove</button>
+    <hr/>
+    `;
+    bookContainer.innerHTML += x;
+  }
+  const remove = container.querySelectorAll('.remove');
+  remove.forEach((btn, index) => btn.addEventListener('click', () => {
+    removeBook(index);
+    displayBooks(books);
+    editLocalStorage(index);
+  }));
 }
