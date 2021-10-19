@@ -12,6 +12,7 @@ function NewBooks(title, author) {
   this.title = title;
   this.author = author;
 }
+const bookContainer = container.querySelector('.books');
 const add = container.querySelector('.add'); 
 const title = container.querySelector('.title'); 
 const author = container.querySelector('.author'); 
@@ -50,3 +51,20 @@ function displayBooks(arr) {
     editLocalStorage(index);
   }));
 }
+
+add.addEventListener('click', (e) => {
+  if (title.value !== '' && author.value !== '') {
+    e.preventDefault();
+    addBooks(title.value, author.value);
+    localStorage.setItem('books', JSON.stringify(books));
+    displayBooks(books);
+    title.value = '';
+    author.value = '';
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  books = JSON.parse(localStorage.books);
+  displayBooks(books);
+});
+
