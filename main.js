@@ -1,4 +1,4 @@
-const container = document.querySelector('.main-container');
+const container = document.querySelector('.container');
 
 let books = [];
 container.innerHTML = `
