@@ -1,0 +1,23 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.main {
+  width: 80%;
+  margin: auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.main-container ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
