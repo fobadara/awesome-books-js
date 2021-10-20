@@ -2,7 +2,7 @@ const container = document.querySelector('.container');
 let books = [];
 container.innerHTML = `
 <div class="books"></div>
-<form>
+<form class = "form-cont d-flex">
     <input type="text" class="title" placeholder="Title" required><br><br>
     <input type="text" class="author" placeholder="Author" required class><br><br>
     <button class="add">Add</button>
@@ -43,9 +43,11 @@ displayBooks = (arr) => {
   bookContainer.innerHTML = '';
   for (let i = 0; i < arr.length; i += 1) {
     const x = ` 
-    <p>${arr[i].title}</p>
-    <p>${arr[i].author}</p>
+    <ul>
+    <li class= "rows">${arr[i].title}</li>
+    <li class= "rows">${arr[i].author}</li>
     <button class="remove">Remove</button>
+    </ul>
     <hr/>
     `;
     bookContainer.innerHTML += x;
