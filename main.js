@@ -33,12 +33,6 @@ function addBooks(title, author) {
   books.push(book);
 }
 
-
-// addBooks = (title, author) => {
-//   const book = new NewBooks(title, author);
-//   books.push(book);
-// }
-
 editLocalStorage = (index) => {
   books = JSON.parse(localStorage.books);
   const data = books.filter((book) => book !== books[index]);
@@ -71,11 +65,6 @@ function displayBooks(arr) {
     library.displayBooks(books);
     library. editLocalStorage(index);
   }));
-
-    removeBook(index);
-    displayBooks(books);
-    editLocalStorage(index);
-  }));
 }
 
 add.addEventListener('click', (e) => {
@@ -91,8 +80,6 @@ add.addEventListener('click', (e) => {
     author.value = '';
   }
 });
-}
-}
 
 const library = new Library();
 
