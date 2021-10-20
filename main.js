@@ -37,12 +37,9 @@ class Library {
     bookContainer.innerHTML = '';
     for (let i = 0; i < arr.length; i += 1) {
       const x = ` 
-    <ul>
-    <li class= "rows">${arr[i].title}</li>
-    <li class= "rows">${arr[i].author}</li>
+    <p class= "rows">${arr[i].title}</p>
+    <p class= "rows">${arr[i].author}</p>
     <button class="remove">Remove</button>
-    </ul>
-    <hr/>
     `;
       bookContainer.innerHTML += x;
     }
