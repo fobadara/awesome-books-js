@@ -3,6 +3,12 @@ html {
   -ms-text-size-adjust: 100%;
 }
 
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: black;
+  color: antiquewhite;
+}
+
 li {
   list-style-type: none;
 }
@@ -10,6 +16,21 @@ li {
 .main {
   width: 80%;
   margin: auto;
+}
+
+.main {
+  width: 80%;
+  margin: auto;
+}
+
+.main-container {
+  border: solid rgb(209, 209, 207);
+  background-color: rgb(117, 116, 116);
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 5em;
 }
 
 .d-flex {
@@ -20,4 +41,96 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.main-container .rows {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  padding-left: 0;
+  padding-top: 0.5em;
+  margin-left: -2.3em;
+}
+
+li .title-span {
+  display: grid;
+  grid-template-columns: auto auto;
+  word-break: normal;
+  width: 100%;
+  border: solid;
+  border-radius: 20% 10%;
+  background-color: blueviolet;
+  height: 2em;
+  margin-left: 0;
+  padding: 0.3em 0.2em 0;
+}
+
+.remove-btn {
+  color: antiquewhite;
+  background-color: rgba(216, 72, 72, 0.2);
+  margin-left: -2.4em;
+  height: 2em;
+  margin-right: 0.2em;
+}
+
+.remove-btn:hover {
+  color: rgb(219, 40, 40);
+}
+
+.remove-btn:active {
+  background-color: rgba(209, 25, 25, 1);
+  color: antiquewhite;
+}
+
+.form-cont {
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+form {
+  width: 90%;
+}
+
+form input {
+  width: 100%;
+  height: 2em;
+  border: none;
+}
+
+form input:focus {
+  border: solid rgb(107, 107, 105);
+  border-radius: 0.2em;
+  outline: none;
+}
+
+form button {
+  float: right;
+  width: 25%;
+  height: 2em;
+  background-color: rgb(11, 238, 11);
+  color: rgb(250, 245, 245);
+  font-size: medium;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.2em;
+}
+
+form button:active {
+  transform: translate(10%);
+}
+
+@media only screen and (min-width: 400px) {
+  .main-container ul {
+    flex-direction: row;
+  }
+
+  li .title-span {
+    margin-top: -0.3em;
+    margin-bottom: 0.5em;
+  }
+
+  .remove-btn {
+    margin-left: 0.5em;
+  }
 }
