@@ -1,18 +1,17 @@
-## My Portfolio Site
+## Awesome Books
 
-This is an e-library showing
-our understanding of CRUD.
-
-<!-- ![screenshot](images/shot1.png)
-![screenshot](images/shot2.png)
-![screenshot](images/shot3.png)
-![screenshot](images/shot4.png) -->
-
-# <div align="center"><a href="https://fobadara.github.io/awesome-books/" text="bold">Live Demo</a></div>
+This is my Awesome Book project.
 
 # Description
 
-<!-- ![screenshot](images/portfolio2.gif) -->
+This project is an Awesome_books project, it's built using ES6 classes, in the class is a constructor that adds the title and author of a book to an array of objects. When the user clicks on the 'add' button, a method is invoked from the class that push the values entered into the Title and author input are added to an array of object that are in turn displayed on the page. Similarly, when the user clicks on the 'remove' button, another method is invoked to handle the event which is, the correct book is removed from the array of objects, and also removed from the page.
+
+
+# <div align="center"><a href="https://fobadara.github.io/awesome-books-js/" text="bold">Live Demo</a></div>
+
+
+
+
 
 > This is a site in which you can add, remove and display books. It also saves the details on local storage for use at any point in time.
 
@@ -36,9 +35,9 @@ our understanding of CRUD.
 
 To get a local copy up and running follow these simple example steps.
 
-⬜ clone the app by running this command `git clone https://github.com/fobadara/awesomebooks.git`
+⬜ clone the app by running this command `git clone https://github.com/fobadara/awesome-books-js.git`
 
-⬜ Run this command `cd awesome-books`
+⬜ Run this command `cd awesome-books-js`
 
 ⬜ Open in browser
 
@@ -60,17 +59,23 @@ You can run tests by following these steps:
 
 ⬜ I have created a pull request which runs linters or you could simply create a pull rrequest of your own
 
-# Authors
 
-👤 Kingsley
+## Authors
 
-Github: [github.com/kingstalux](github.com/kingstalux)
+👤 **Muhammad**
+- GitHub: [Muhammad](https://github.com/mahtsham)
 
-👤 Abdulfatai Badara
+👤 **Abdulfatai Badara**
 
-GitHub: [github.com/fobadara](github.com/fobadara)
+- GitHub: [github.com/fobadara](github.com/fobadara)
+- Twitter: fob90s@twitter.com
 
-Twitter: fob90s@twitter.com
+👤 **Yishak**
+
+- GitHub: [Yishak ,Wes-Isaac](https://github.com/Wes-Isaac)
+- LinkedIn: [@Yishak](https://www.linkedin.com/in/yishak-wesego-b404851a7/)
+
+
 
 # 🤝 Contributing
 
