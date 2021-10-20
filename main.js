@@ -1,4 +1,5 @@
-const container = document.querySelector('.container');
+const container = document.querySelector('.main-container');
+
 let books = [];
 container.innerHTML = `
 <div class="books"></div>
@@ -14,35 +15,28 @@ const add = container.querySelector('.add');
 const title = container.querySelector('.title');
 const author = container.querySelector('.author');
 
-
 class Library {
   addBooks = (title, author) => {
-  // this.title = title;
-  // this.author = author;
-  const book = {title, author};
-  books.push(book);
-}
+    // this.title = title;
+    // this.author = author;
+    const book = { title, author };
+    books.push(book);
+  }
 
+  editLocalStorage = (index) => {
+    books = JSON.parse(localStorage.books);
+    const data = books.filter((book) => book !== books[index]);
+    localStorage.setItem('books', JSON.stringify(data));
+  }
 
-// addBooks = (title, author) => {
-//   const book = new NewBooks(title, author);
-//   books.push(book);
-// }
+  removeBook = (index) => {
+    books = books.filter((item) => item !== books[index]);
+  }
 
-editLocalStorage = (index) => {
-  books = JSON.parse(localStorage.books);
-  const data = books.filter((book) => book !== books[index]);
-  localStorage.setItem('books', JSON.stringify(data));
-}
-
-removeBook = (index) => {
-  books = books.filter((item) => item !== books[index]);
-}
-
-displayBooks = (arr) => {
-  bookContainer.innerHTML = '';
-  for (let i = 0; i < arr.length; i += 1) {
-    const x = ` 
+  displayBooks = (arr) => {
+    bookContainer.innerHTML = '';
+    for (let i = 0; i < arr.length; i += 1) {
+      const x = ` 
     <ul>
     <li class= "rows">${arr[i].title}</li>
     <li class= "rows">${arr[i].author}</li>
@@ -50,27 +44,26 @@ displayBooks = (arr) => {
     </ul>
     <hr/>
     `;
-    bookContainer.innerHTML += x;
-  }
-  const remove = container.querySelectorAll('.remove');
-  remove.forEach((btn, index) => btn.addEventListener('click', () => {
-    library.removeBook(index);
-    library.displayBooks(books);
-    library. editLocalStorage(index);
-  }));
+      bookContainer.innerHTML += x;
+    }
+    const remove = container.querySelectorAll('.remove');
+    remove.forEach((btn, index) => btn.addEventListener('click', () => {
+      this.removeBook(index);
+      this.displayBooks(books);
+      this.editLocalStorage(index);
+    }));
 
-
-add.addEventListener('click', (e) => {
-  if (title.value !== '' && author.value !== '') {
-    e.preventDefault();
-    this.addBooks(title.value, author.value);
-    localStorage.setItem('books', JSON.stringify(books));
-    this.displayBooks(books);
-    title.value = '';
-    author.value = '';
+    add.addEventListener('click', (e) => {
+      if (title.value !== '' && author.value !== '') {
+        e.preventDefault();
+        this.addBooks(title.value, author.value);
+        localStorage.setItem('books', JSON.stringify(books));
+        this.displayBooks(books);
+        title.value = '';
+        author.value = '';
+      }
+    });
   }
-});
-}
 }
 
 const library = new Library();
