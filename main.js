@@ -88,3 +88,47 @@ class Library {
 const library = new Library();
 library.addEvent();
 library.checkRender();
+
+class LoadContent {
+  // Load page content
+
+  loadPage() {
+    // eslint-disable-next-line no-restricted-globals
+    this.hash = location.hash;
+    this.display = document.querySelectorAll('.display');
+    if (this.display) {
+      this.display.forEach((element) => {
+        element.classList.replace('display', 'hidden');
+      });
+    }
+
+    // Display appropriate content
+    this.element = document.querySelectorAll(`.${this.hash.substr(1)}`);
+    for (let i = 0; i < this.element.length; i += 1) {
+      this.element[i].classList.replace('hidden', 'display');
+    }
+  }
+
+  displayTime() {
+    // eslint-disable-next-line no-undef
+    this.DateTime = luxon.DateTime.now();
+    this.date = document.querySelector('.date');
+    // eslint-disable-next-line no-undef
+    this.date.innerText = `Date/Time: ${this.DateTime.toLocaleString(luxon.DateTime.DATETIME_MED)}`;
+  }
+
+  // Listen for events
+  windowEvent() {
+    this.list = document.querySelectorAll('.list');
+    this.list.forEach((element) => {
+      window.location.hash = '#list';
+      element.classList.replace('hidden', 'display');
+    });
+
+    window.addEventListener('hashchange', this.loadPage);
+  }
+}
+
+const loadContent = new LoadContent();
+loadContent.windowEvent();
+loadContent.displayTime();
