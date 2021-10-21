@@ -38,7 +38,7 @@ header {
 
 .nav-child {
   padding-left: 0.5em;
-  background-color: blueviolet;
+  background-color:#000080;
   margin-top: 0;
   border: solid;
   justify-content: space-between;
@@ -110,7 +110,7 @@ li .title-span {
   width: 100%;
   border: solid;
   border-radius: 20% 10%;
-  background-color: blueviolet;
+  background-color: #000080;
   height: 2em;
   margin-left: 0;
   padding: 0.3em 0.2em 0;
@@ -180,7 +180,7 @@ footer {
   width: 100%;
   border: solid;
   padding: 0 1em;
-  background-color: blueviolet;
+  background-color: #000080;
   position: fixed;
   bottom: 0;
 }
