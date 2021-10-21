@@ -5,14 +5,28 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/styles.css">
   <title>Awesome Books</title>
 </head>
 
 <body>
+  <nav class="nav">
+    <div class="d-flex nav-child">
+      <div><a href="#list">Awesome Books</a></div>
+      <ul class="right-nav d-flex">
+        <li><a href="#list">List</a></li>
+        <li><a href="#new">Add New</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="date"></div>
+  </nav>
   <header>
     <h1>
       <span class="list hidden">All Awesome Books</span>
+      <span class="new hidden">Add a New Book</span>
+      <span class="contact hidden">Contact Information</span>
     </h1>
   </header>
   <main>
@@ -29,7 +43,23 @@
         </form>
       </div>
     </div>
+    <!-- Contact info -->
+    <div class="contact hidden contact-info">
+      <div>
+        <p>Do you have any questions or just want to say "Hello?"</p>
+        <p>You can reach out to us through:</p>
+        <ul>
+          <li>Our Email <a href="fob90s@gmail.com">fob90s@gmail.com</a></li>
+          <li>Our Phone Number: +2349066478370</li>
+          <li>Our address: Osun State Nigeria</li>
+        </ul>
+      </div>
+    </div>
   </main>
+  <footer>
+    <p>Copyright</p>
+  </footer>
+  <script src="luxon.js"></script>
   <script src="main.js"></script>
 </body>
 
