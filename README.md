@@ -7,7 +7,7 @@ This is my Awesome Book project.
 
 This project is an Awesome_books project, it's built using ES6 classes, in the class is a constructor that adds the title and author of a book to an array of objects. When the user clicks on the 'add' button, a method is invoked from the class that push the values entered into the Title and author input are added to an array of object that are in turn displayed on the page. Similarly, when the user clicks on the 'remove' button, another method is invoked to handle the event which is, the correct book is removed from the array of objects, and also removed from the page.
 
-This project is an Awesome_books project, that adds the title and author of a book to an array of objects. When the user clicks on the 'add' button, the values entered into the Title and author input are added to an array of object that are in turn displayed on the page. Similarly, when the user clicks on the 'remove' button, the correct book is removed from the array of objects, and also removed from the page.
+This project is an Awesome_books project, that adds the title and author of a book to an array of objects. When the user clicks on the 'add' button, the values entered into the Title and author input are added to an array of object that are in turn displayed on the page. Similarly, when the user clicks on the 'remove' button, the correct book is removed from the array of objects, and also removed from the page. This project was brought to life with HTML, CSS and Javascript.
 
 
 
